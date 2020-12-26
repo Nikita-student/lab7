@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-namespace TRPO
+namespace Oborotov
 {
-    class B : A
+    public class QuadraticEquation : LinearEquation
     {
         public List<float> Solve(float a, float b, float c)
         {
             if (a == 0)
-                return base.Solve(b, c);
-           float D = (float) Math.Sqrt (discriminant(a, b, c));
+            {
+                return base.Solve(b, c, 0);
+            }
+            float D = (float) Math.Sqrt (discriminant(a, b, c));
             if (D == 0)
             {
                 return X = new List<float>() { (-b + D) / (2 * a) };

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using core;
 
-namespace TRPO
+namespace Oborotov
 {
-    class A
+    public class LinearEquation : IEquationInterface
     {
         protected List<float> X;
-        public List<float> Solve(float a, float b)
+        public List<float> Solve(float a, float b, float c)
         {
             if (a == 0)
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using Oborotov;
 
 namespace TRPO
 { 
@@ -6,18 +7,17 @@ namespace TRPO
     {
         static void Main(string[] args)
         {
-            B b = new B();
+            QuadraticEquation b = new QuadraticEquation();
             try
             {
-                b.Solve(2, 4);
-                b.Solve(1, -2, -3);
-                b.Solve(1, 4, 4);
-                b.Solve(-2, 3);
+                MyLog.Log("Корни: " + String.Join(" ", b.Solve(4, -5, -9)));
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                MyLog.Log(e.Message);
             }
+
+            MyLog.Write();
             Console.ReadKey();
         }
     }
