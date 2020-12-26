@@ -11,8 +11,9 @@ namespace Oborotov
         {
             if (a == 0)
             {
-                throw new Exception("Уравнение не имеет решения, a = 0");
+                throw new OborotovException("Уравнение не имеет решения, a = 0");
             }
+            MyLog.Log("Это линейное уравнение.");
             return X = new List<float> { -b / a };
         }
     }

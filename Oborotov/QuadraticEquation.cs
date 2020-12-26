@@ -12,6 +12,7 @@ namespace Oborotov
                 return base.Solve(b, c, 0);
             }
             float D = (float) Math.Sqrt (discriminant(a, b, c));
+            MyLog.Log("Это квадратное уравнение.");
             if (D == 0)
             {
                 return X = new List<float>() { (-b + D) / (2 * a) };
@@ -26,7 +27,7 @@ namespace Oborotov
             }
             if (D < 0)
             {
-                throw new Exception("Уравнение не имеет решения, D < 0");
+                throw new OborotovException("Уравнение не имеет решения, D < 0");
             }
             return X;
         }

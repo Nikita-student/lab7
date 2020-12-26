@@ -7,12 +7,22 @@ namespace TRPO
     {
         static void Main(string[] args)
         {
-            QuadraticEquation b = new QuadraticEquation();
+            QuadraticEquation myb = new QuadraticEquation();
+
+            float a, b, c;
+            Console.WriteLine("Введите 3 параметра a, b и с");
+            Console.Write("a = ");
+            a = Convert.ToSingle(Console.ReadLine());
+            Console.Write("b = ");
+            b = Convert.ToSingle(Console.ReadLine());
+            Console.Write("c = ");
+            c = Convert.ToSingle(Console.ReadLine());
+
             try
             {
-                MyLog.Log("Корни: " + String.Join(" ", b.Solve(4, -5, -9)));
+                MyLog.Log("Корни: " + String.Join(" ", myb.Solve(a, b, c)));
             }
-            catch (Exception e)
+            catch (OborotovException e)
             {
                 MyLog.Log(e.Message);
             }
