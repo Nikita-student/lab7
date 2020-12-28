@@ -1,2 +1,2 @@
 git clone https://github.com/rok9ru/trpo-core-cs "core"
-git symbolic-ref --short -q HEAD>bin\Debug\netcoreapp3.1\version
+git symbolic-ref --short -q HEAD>version
