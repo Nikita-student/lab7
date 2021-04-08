@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using Oborotov;
 
 namespace TRPO
@@ -8,11 +7,6 @@ namespace TRPO
     {
         static void Main(string[] args)
         {
-            using (StreamReader sr = new StreamReader("version"))
-            {
-                MyLog.Log($"Версия программы {sr.ReadToEnd().Trim()}");
-            }
-
             QuadraticEquation myb = new QuadraticEquation();
 
             float a, b, c;
